@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "784890535852",
+    "project_id": "s310data",
+    "storage_bucket": "s310data.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784890535852:android:cfdda82542853e0664e409",
+        "android_client_info": {
+          "package_name": "com.apppppp.bluetoothclassictest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGwXmZPFikWy14Yqf2qf8Dh3zxwv4Mkm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
