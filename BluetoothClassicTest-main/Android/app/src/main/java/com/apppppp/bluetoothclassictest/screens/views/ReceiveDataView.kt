@@ -51,6 +51,13 @@ fun ReceiveDataView(
     saveData: Boolean, // ← フラグ追加
     deviceViewModel: DeviceViewModel = viewModel()
 ) {
+    val context = LocalContext.current
+    // ReceiveDataScreenから呼び出された場合のみデータ保存実行
+    if (saveData) {
+        LaunchedEffect(speedD, heiD, rpmD, rollD, pitchD, yawD, eAngD, rAngD) {
+            saveToSheetIfUpdated(context, speedD, heiD, rpmD, rollD, pitchD, yawD, eAngD, rAngD, sw1D)
+        }
+    }
     // 高度を Float に変換（null やエラー時は 0m）
     val altitude = heiD?.toFloatOrNull() ?: 0f
     val normalizedAltitude = (altitude / 10f).coerceIn(0.00001f, 1f) // 0.00001 〜 1.0 の範囲に制限(widthの値が0だとエラー出る)
